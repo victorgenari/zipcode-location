@@ -2,26 +2,29 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     width: 100%;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     padding: 2rem 0 0 0;
 `
 
 export const Content = styled.div`
     width: 100%;
-    max-width: 1200px;
+    max-width: 800px;
 
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
 
     padding: 1rem;
     border-radius: 0.5rem;
 
-    border: 2px solid #000;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
 
     h1 {
         font-size: 2rem;
@@ -47,19 +50,22 @@ export const InputAndSearchButton = styled.div`
     align-items: center;
     gap: 0.5rem;
 
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+    background: #FAFAFA;
+    border: 2px solid #C0C0C0;
+
+    &:hover {
+        transition: .3s;
+        border: 2px solid #4F4F4F;    
+    }
+
     input {
         width: 100%;
-
         font-size: 1.5rem;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
 
-        border: 2px solid #C0C0C0;
-
-        &:hover {
-            transition: .3s;
-            border: 2px solid #4F4F4F;    
-        }
+        background: transparent;
     }
 
     button {
@@ -72,27 +78,48 @@ export const InputAndSearchButton = styled.div`
         font-size: 2rem;
 
         background: transparent;
+
+        &:hover {
+            transition: .3s;
+            transform: scale(1.1);
+        }
     }
 `
 
 export const ZipcodeInformations = styled.div`
     width: 100%;
+    max-width: 30rem;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
 
     padding: 1rem;
     border-radius: 0.5rem;
 
-    border: 2px solid #FF0000;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+`
 
-    div {
-        display: flex;
-        justify-content: space-around;
+export const GapInfos = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 
-        span {
-            font-size: 1.2rem;
-        }
+    p {
+        font-weight: 600;
+    }
+`
+
+export const IconAndTitle = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    i {
+        color: green;
+    }
+
+    span {
+        font-size: 1.2rem;
     }
 `
